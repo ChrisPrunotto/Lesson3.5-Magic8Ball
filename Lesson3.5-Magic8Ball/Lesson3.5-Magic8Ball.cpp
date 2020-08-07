@@ -2,19 +2,52 @@
 //
 
 #include <iostream>
+#include <cstdlib>
+#include <time.h>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+
+	//Magic Eight Ball Program
+	std::cout << "MAGIC 8-BALL: \n\n";
+
+	//Seed the random time:
+	std::srand(time(NULL));
+
+	int answer = std::rand() % 10;
+	//std::cout << answer;
+
+	switch (answer)
+	{
+	case 0:
+		std::cout << "It is certain.\n";
+		break;
+	case 1:
+		std::cout << "Look, I'm not your boss, do what you want.\n";
+		break;
+	case 2:
+		std::cout << "Sleep on it.\n";
+		break;
+	case 3:
+		std::cout << "What Would Henry Rollins Do?\n";
+		break;
+	case 4:
+		std::cout << "It's in the refrigerator.\n";
+		break;
+	case 5:
+		std::cout << "IDK??\n";
+		break;
+	case 6:
+		std::cout << "Aren't you the adult here?\n";
+		break;
+	case 7:
+		std::cout << "Outlook uncertain. Try again.\n";
+		break;
+	case 8:
+		std::cout << "Call your mom.\n";
+		break;
+	case 9:
+		std::cout << "The answer is No.\n";
+		break;
+	}
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
